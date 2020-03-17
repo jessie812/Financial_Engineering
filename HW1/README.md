@@ -36,7 +36,7 @@
     period=int(input())
     print("please enter annual interest(%)= ")
     yr_interest=int(input())
-    
+   
     principle_payable=(principle*10000)/(period*12)
     print("The principle payable in every month= $", math.ceil(principle_payable))
     
@@ -91,5 +91,10 @@
 
 ### 流程圖
 > 蒐集參數
-
+>> 參數包括：本金金額（萬元）、年利率（％）以及總期數（年）
+> 跑出CPM的每期固定本金與每期不同利息、總額
+> 跑出CPM借貸總支付利息與金額
+> 跑出CAM借貸每期固定總額與借貸期間總金額
+> 比較CPM與CAM何者支付期間所需支付總金額較少
+>> 較少支付總額的方法會跑出來推薦借貸者
 
