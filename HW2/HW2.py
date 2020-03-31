@@ -35,6 +35,8 @@ for i in range(t+1):
 import pandas as pd
 pdf=pd.Series(f)
 
-print(pdf)
+print("The YTM is",ytm)
+print("The spot rate is",sr)
+print("The 2D array of forward rate", pdf)
 
 
