@@ -24,7 +24,7 @@ for i in range(1,n+2):
 ##for loop
 #call
 c=[[0]*n for i in range(n)]
-
+print(c_)
 for i in range(n):
     c[0][i]=round((p*c_[i]+(1-p)*c_[i+1])/R, 3)
 for i in range(1,n):
@@ -37,7 +37,7 @@ for i in range(n):
 
 #put
 put=[[0]*n for i in range(n)]
-
+print(p_)
 for i in range(n):
     put[0][i]=round((p*p_[i]+(1-p)*p_[i+1])/R, 3)
 for i in range(1,n):
