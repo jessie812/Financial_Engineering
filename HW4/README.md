@@ -8,7 +8,6 @@
 * Interlude: CAPM
 * Black-Scholes Formula
 * Consider dividend
-* HW discussion
 
 ## Text
 ### Brownian Motion and Geometric Brownian Motion
@@ -75,4 +74,40 @@ ln(St/S0)~ n((μ-σ^2/2)t, (σ^2)t)
 ln(St)~ n(ln(S0)+(μ-σ^2/2)t, (σ^2)t)
 
 St~log-normal
+### Risk-Neutral
+St is current stock price; K is forward price
 
+f= exp(-rt)E[St-K]= exp(-rt)E[St]- exp(-rt)K
+
+in risk-neutral world: E[St]=exp(rt)S
+
+therefore f= S- exp(-rt)K
+### Interlude: CAPM
++ valuing risky cashflow
+
+then f=exp(-θt)E[St]- exp(-rt)K, and E[St]= exp(θt)S
+
+θ= r+ β(E[rm]-r)
+### Black-Scholes Formula
+c(call)= exp(-rt)E[max(0, St-X)]
+
+let μ becomes the annual expected rate of return of the stock and σ^2 becomes annualized variance of the rate of return on the stock
+
+If St is log-normal
+
+then ln(St)~ n(ln(S)+(μ-σ^2/2)t, (σ^2)t)
+
+and in risk-neutral world μ=r
+
+ln(St)~ n(ln(S)+(r-σ^2/2)t, (σ^2)t)
+
+c= exp(-rt)E[max(0, St-X)]= exp(-rt)∫(St-X)g(St)dSt
+
+= Sn(d1)-exp(-rt)Xn(d2)
+
+(d1= (ln(St/X)+(r+1/2(σ^2))t)/σ√t; d2= d1-σ√t)
+
+p(put)= c+ exp(-rt)X-St= exp(-rt)Xn(-d2)-Sn(-d1)
+
+### Consider dividend
+head_S= St- dividend
